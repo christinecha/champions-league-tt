@@ -6,6 +6,7 @@
   "scripts": {
     "clean": "rm -rf ./public",
     "copy:assets": "mkdir ./public/assets && cp ./assets/* public/assets",
+    "generate:sitemap": "node ./scripts/generate-sitemap.js",
     "build:styles": "sass ./client/styles/index.scss ./public/styles/index.css",
     "build": "NODE_ENV=production webpack && npm run build:styles && npm run copy:assets && npm run generate:sitemap",
     "dev": "NODE_ENV=development webpack && webpack-dev-server & sass ./client/styles/index.scss ./public/styles/index.css --watch"
@@ -16,7 +17,6 @@
     "axios": "^0.18.0",
     "cheerio": "^1.0.0-rc.3",
     "core-js": "^2.6.9",
-    "ejs-loader": "^0.3.3",
     "fs-extra": "^8.0.1",
     "jsonfile": "^5.0.0"
   },
