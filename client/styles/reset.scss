@@ -1,12 +1,11 @@
 @import '_variables.scss';
 
 body {
-  font-family: 'Viga', sans-serif;
-  background: $black;
-  color: white;
+  font-family: 'Roboto', sans-serif;
+  background: $navy;
+  color: $white;
   padding: 0;
   margin: 0;
-  border: 20px solid white;
   overflow: hidden;
 }
 
@@ -18,12 +17,43 @@ main {
   position: relative;
   width: 100%;
   height: 100%;
-  padding: 20px;
+  padding: $page-margin;
   overflow: scroll;
+  display: flex;
+  align-items: center;
 
   @media (min-width: 768px) {
-    padding: 50px;
+    padding: $page-margin-lg;
   }
+}
+
+h1 {
+  font-size: 36px;
+  font-family: 'Playfair Display', serif;
+  font-weight: normal;
+  letter-spacing: 0.1em;
+
+  @media (min-width: 768px) {
+    font-size: 48px;
+  }
+
+  strong {
+    font-weight: normal;
+    color: $lime;
+  }
+}
+
+h4 {
+  font-size: 12px;
+  font-weight: normal;
+  letter-spacing: 0.05em;
+}
+
+p {
+  letter-spacing: 0.05em;
+  line-height: 1.4em;
+  font-size: 14px;
+  max-width: 600px;
 }
 
 label {
@@ -35,18 +65,22 @@ label {
 }
 
 input,
-.input,
 textarea {
-  display: inline-block;
-  height: 1em;
-  line-height: 1em;
+  display: block;
+  font-family: 'Oswald', Impact, sans-serif;
+  font-size: 18px;
   background: transparent;
-  font-family: inherit;
   color: inherit;
-  border: none;
+  border: 2px solid $white;
   text-transform: uppercase;
   white-space: pre;
-  max-width: 100%;
+  width: 100%;
+  max-width: 340px;
+  padding: 5px;
+
+  &::placeholder {
+    color: rgba(255,255,255,0.5);
+  }
 }
 
 input:focus {
@@ -60,9 +94,9 @@ select {
 }
 
 button {
-  padding: 10px 20px;
-  background: blue;
-  color: white;
+  padding: 20px 20px;
+  background: transparent;
+  color: inherit;
   font-weight: bold;
   border: none;
   outline: none;

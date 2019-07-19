@@ -1,0 +1,26 @@
+@import '_variables.scss';
+
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: calc(100% - #{$page-margin});
+  height: 40px;
+  background: $orange;
+  z-index: 1;
+
+  display: flex;
+  justify-content: flex-end;
+
+  @media (min-width: 768px) {
+    width: calc(100% - #{$page-margin-lg});
+  }
+}
+
+button {
+  font-family: 'Oswald', Impact, sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 0;
+}

@@ -1,0 +1,40 @@
+@import '_variables.scss';
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $orange;
+  color: $white;
+  z-index: 2;
+  padding: $page-margin;
+
+  visibility: hidden;
+
+  @media (min-width: 768px) {
+    padding: $page-margin-lg;
+  }
+
+  &.active {
+    visibility: visible;
+  }
+
+  .close {
+    font-size: 30px;
+    padding: 10px;
+    margin: -10px;
+    cursor: pointer;
+  }
+}
+
+#email-signup {
+  margin-top: 50px;
+
+  button {
+    background: $white;
+    color: $orange;
+    margin-top: 10px;
+  }
+}

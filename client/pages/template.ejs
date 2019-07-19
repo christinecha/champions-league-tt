@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Roboto|Oswald" rel="stylesheet">
+    <link href="/styles/index.css" type="text/css" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="/assets/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/assets/favicon-16x16.png" sizes="16x16" />
+  </head>
+
+  <body>
+    <header>
+      <button class="overlay-trigger">→ Tickets</button>
+    </header>
+
+    <main>
+      <div class="intro">
+        <h1>
+          <strong>The&nbsp;Inaugural</strong><br />
+          New&nbsp;York<br />
+          Table&nbsp;Tennis<br />
+          Invitational.
+        </h1>
+
+        <div class="presenters">
+            <h4>Presented by</h4>
+            <div class="logos">
+              <div class="logo">
+                <%= require('./partials/the-push.ejs')() %>
+              </div>
+              <div class="logo">
+                <%= require('./partials/aytto.ejs')() %>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <div id="ball"></div>
+    </main>
+
+    <div id="overlay">
+      <div class="close">✕</div>
+      <h1>Tickets are <br />not available<br /> to the public yet.</h1>
+      <p>Sign up with your email to stay up to date on event info and ticket availability.</p>
+
+      <form id="email-signup" netlify>
+        <input name="email" type="email" placeholder="EMAIL" />
+        <button>Ok</button>
+      </form>
+    </div>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142382461-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', '<TAG HERE>');
+    </script>
+
+  </body>
+</html>

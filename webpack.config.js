@@ -1,24 +1,12 @@
 const path = require('path')
-const fs = require('fs-extra')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const pages = require('./pages-config')
 
-const JSON_FOLDER = path.resolve(__dirname, 'data/visa-requirements')
 const PUBLIC_DIR = path.resolve(__dirname, 'public')
-
-const getJSONFiles = () => {
-  const files = fs.readdirSync(JSON_FOLDER)
-  
-  return files.reduce((obj, file) => {
-    const name = path.basename(file)
-    return { ...obj, [name]: path.resolve(JSON_FOLDER, file) }
-  }, {});
-}
 
 const shared = {
   entry: {
     'index.js': './client/src/index.js',
-    ...getJSONFiles()
   },
   output: {
     path: path.resolve(PUBLIC_DIR),
@@ -33,6 +21,10 @@ const shared = {
         loaders: ['babel-loader'],
         exclude: /node_modules/,
       },
+      {
+        test: /\.ejs$/,
+        loader: 'ejs-loader',
+      }
     ]
   }
 }

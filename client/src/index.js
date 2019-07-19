@@ -1,94 +1,19 @@
-import countriesJSON from '../../shared/countries.json'
-import flagsJSON from '../../shared/flags.json'
-import initDOM from './initDOM'
-import render from './render'
-import onCountrySelect from './onCountrySelect'
-import onDocumentKeyUp from './onDocumentKeyUp'
-import checkRequirements from './checkRequirements'
+class App {
+  constructor() {
+    this.$overlay = document.getElementById('overlay')
+    this.$closeOverlay = this.$overlay.getElementsByClassName('close')[0]
+    this.$overlayTriggers = Array.from(document.getElementsByClassName('overlay-trigger'))
 
-const AVAILABLE_PASSPORTS = countriesJSON.filter(n => n.wikipediaSource).map(n => n.code)
-const COUNTRIES_BY_CODE = countriesJSON.reduce((obj, c) => ({
-  ...obj, 
-  [c.code]: c
-}), {})
-
-const App = () => {
-  return {
-    COUNTRIES_BY_CODE, 
-    AVAILABLE_PASSPORTS,
-    FLAGS_BY_CODE: flagsJSON,
-    REQUIREMENTS_CACHE: {},
-
-    state: {
-      typeaheadValue: '',
-      passport: '',
-      destination: '',
-      passportColors: [],
-      destinationColors: [],
-      preselect: 0,
-    },
-
-    setState(obj) {
-      this.state = { ...this.state, ...obj }
-      this.render()
-    },
-
-    init() {
-      this.initDOM()
-      this.render()
-      this.refs.typeahead.focus()
-
-      if (window.INITIAL_PASSPORT) {
-        const country = this.COUNTRIES_BY_CODE[window.INITIAL_PASSPORT]
-        this.onCountrySelect(country)
-      }
-      
-      document.addEventListener('keydown', this.onDocumentKeyDown.bind(this))
-      document.addEventListener('keyup', this.onDocumentKeyUp.bind(this))
-      this.refs.typeahead.addEventListener('keyup', this.onInput.bind(this))
-
-      this.refs.options.forEach($option => {
-        $option.addEventListener('click', (e) => {
-          e.preventDefault()
-          const countryCode = $option.dataset.countryCode
-          const country = this.COUNTRIES_BY_CODE[countryCode] || {}
-
-          this.onCountrySelect(country)
-        })
+    this.$overlayTriggers.forEach($trigger => {
+      $trigger.addEventListener('click', () => {
+        this.$overlay.classList.add('active')
       })
+    })
 
-      this.refs.passport.addEventListener('click', () => {
-        this.setState({ 
-          passport: '',
-          destination: '',
-        })
-      })
-
-      this.refs.destination.addEventListener('click', () => {
-        this.setState({ 
-          destination: '',
-        })
-      })
-    },
-
-    onInput(e) {
-      const typeaheadValue = (e.target.value || '').toLowerCase()
-      this.setState({ 
-        typeaheadValue,
-      })
-    },
-
-    onDocumentKeyDown() {
-      this.refs.typeahead.focus()
-    },
-    
-    onDocumentKeyUp,
-    onCountrySelect,
-    checkRequirements,
-    initDOM, 
-    render
+    this.$closeOverlay.addEventListener('click', () => {
+      this.$overlay.classList.remove('active')
+    })
   }
 }
 
-const app = App()
-app.init()
+new App()
