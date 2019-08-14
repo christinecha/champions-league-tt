@@ -14,8 +14,8 @@ const pages = [
   {
     ...shared,
     title: 'New York Table Tennis Invitational',
-    template: './client/pages/template.ejs',
-    filename: 'index.html',
+    template: './client/pages/invitational.ejs',
+    filename: 'invitational.html',
   },
 ]
 

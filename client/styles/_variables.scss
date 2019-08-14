@@ -1,8 +1,27 @@
-$black: #121212;
+$black: #030F14;
+$dark-gray: #1A1F21;
 $navy: #0E0D29;
 $white: #FFF;
 $lime: #D6FF00;
 $orange: #FFB400;
+$blue: #4000FF;
+$yellow: #FFEB00;
 
 $page-margin: 30px;
 $page-margin-lg: 80px;
+
+$unit: 1vw;
+$unit-landscape: 6px;
+
+$col-width: 7rem;
+$content-width: $col-width * 12;
+
+@mixin row() {
+  display: flex;
+  width: $content-width;
+  margin: auto;
+}
+
+@mixin col($n) {
+  width: $n * $col-width;
+}

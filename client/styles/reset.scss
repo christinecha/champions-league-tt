@@ -1,12 +1,20 @@
 @import '_variables.scss';
 
+html {
+  font-size: $unit;
+
+  @media (min-width: 1024px) {
+    font-size: $unit-landscape;
+  }
+}
+
 body {
   font-family: 'Roboto', sans-serif;
-  background: $navy;
+  background: $black;
   color: $white;
   padding: 0;
   margin: 0;
-  overflow: hidden;
+  font-size: 3rem;
 }
 
 * {
@@ -15,32 +23,25 @@ body {
 
 main {
   position: relative;
-  width: 100%;
-  height: 100%;
-  padding: $page-margin;
-  overflow: scroll;
-  display: flex;
-  align-items: center;
-
-  @media (min-width: 768px) {
-    padding: $page-margin-lg;
-  }
+  width: $content-width;
+  margin: auto;
 }
 
 h1 {
-  font-size: 36px;
-  font-family: 'Playfair Display', serif;
-  font-weight: normal;
-  letter-spacing: 0.1em;
+  font-size: 10rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  line-height: 0.8em;
+  font-style: italic;
+  text-transform: uppercase;
+}
 
-  @media (min-width: 768px) {
-    font-size: 48px;
-  }
-
-  strong {
-    font-weight: normal;
-    color: $lime;
-  }
+h3 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  font-weight: 700;
 }
 
 h4 {
@@ -94,11 +95,21 @@ select {
 }
 
 button {
-  padding: 20px 20px;
+  padding: 5px 10px;
   background: transparent;
   color: inherit;
   font-weight: bold;
   border: none;
   outline: none;
   cursor: pointer;
+}
+
+.row {
+  @include row();
+}
+
+@for $n from 1 through 12 {
+  .col-#{$n} {
+    @include col($n);
+  }
 }

@@ -1,0 +1,57 @@
+<% include ./partials/html-start %>
+
+<main>
+  <div class="intro">
+    <div class="row">
+      <h1>
+        The<br />
+        Champions<br />
+        Invitational
+      </h1>
+    </div>
+
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col-6">
+        <h3>
+          Saturday, November 16<br />
+          New York City
+        </h3>
+        <div class="col-5">
+          <button class="get-tickets">
+            <h3>
+              Get Tickets
+            </h3>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="presenters">
+        <h4>Presented by</h4>
+        <div class="logos">
+          <div class="logo">
+            <% include ./partials/the-push %>
+          </div>
+          <div class="logo">
+            <% include ./partials/aytto %>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <div id="ball"></div>
+</main>
+
+<div id="overlay">
+  <div class="close">✕</div>
+  <h1>Tickets are <br />not available<br /> to the public yet.</h1>
+  <p>Sign up with your email to stay up to date on event info and ticket availability.</p>
+
+  <form id="email-signup" netlify>
+    <input name="email" type="email" placeholder="EMAIL" />
+    <button>Ok</button>
+  </form>
+</div>
+
+<% include ./partials/html-end %>
