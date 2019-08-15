@@ -6,7 +6,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: $orange;
+  background: $blue;
   color: $white;
   z-index: 2;
   padding: $page-margin;
@@ -21,7 +21,16 @@
     visibility: visible;
   }
 
+  .inner {
+    position: relative;
+  }
+
+  .content {
+    margin-top: 10rem;
+  }
+
   .close {
+    position: absolute;
     font-size: 30px;
     padding: 10px;
     margin: -10px;
@@ -30,11 +39,14 @@
 }
 
 #email-signup {
-  margin-top: 50px;
+  display: flex;
+
+  input {
+    flex: 1;
+  }
 
   button {
     background: $white;
-    color: $orange;
-    margin-top: 10px;
+    color: $blue;
   }
 }

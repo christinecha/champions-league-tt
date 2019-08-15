@@ -15,6 +15,7 @@ body {
   padding: 0;
   margin: 0;
   font-size: 3rem;
+  padding-bottom: 20rem;
 }
 
 * {
@@ -37,16 +38,15 @@ h1 {
 }
 
 h3 {
-  font-size: 3rem;
+  @include h3();
+}
+
+h4 {
+  font-size: 2.5rem;
   text-transform: uppercase;
   font-family: 'Roboto', sans-serif;
   font-style: italic;
   font-weight: 700;
-}
-
-h4 {
-  font-size: 12px;
-  font-weight: normal;
   letter-spacing: 0.05em;
 }
 
@@ -55,6 +55,11 @@ p {
   line-height: 1.4em;
   font-size: 14px;
   max-width: 600px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 label {
@@ -67,17 +72,17 @@ label {
 
 input,
 textarea {
+  @include h3();
+
   display: block;
-  font-family: 'Oswald', Impact, sans-serif;
-  font-size: 18px;
   background: transparent;
   color: inherit;
-  border: 2px solid $white;
+  border: 1rem solid $white;
   text-transform: uppercase;
   white-space: pre;
   width: 100%;
   max-width: 340px;
-  padding: 5px;
+  padding: 2rem;
 
   &::placeholder {
     color: rgba(255,255,255,0.5);
@@ -95,10 +100,12 @@ select {
 }
 
 button {
-  padding: 5px 10px;
+  @include h3();
+
+  padding: 3rem 2rem;
+  border: 1rem solid $white;
   background: transparent;
   color: inherit;
-  font-weight: bold;
   border: none;
   outline: none;
   cursor: pointer;

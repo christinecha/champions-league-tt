@@ -10,8 +10,18 @@ $yellow: #FFEB00;
 $page-margin: 30px;
 $page-margin-lg: 80px;
 
+@mixin h3() {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1em;
+}
+
 $unit: 1vw;
-$unit-landscape: 6px;
+$unit-landscape: 5px;
 
 $col-width: 7rem;
 $content-width: $col-width * 12;
@@ -24,4 +34,9 @@ $content-width: $col-width * 12;
 
 @mixin col($n) {
   width: $n * $col-width;
+
+  &.align-center {
+    display: flex;
+    align-items: center;
+  }
 }

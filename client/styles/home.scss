@@ -1,61 +1,42 @@
 @import '_variables.scss';
 
 .intro {
+  .ball {
+    background: white;
+    width: $col-width * 2;
+    height: $col-width * 2;
+    border-radius: 100%;
+  }
+
+  .when-and-where {
+    margin-bottom: 5rem;
+  }
+}
+
+.presenters,
+.partners {
+  display: flex;
+  flex-direction: column;
 }
 
 .presenters {
-  display: flex;
-  flex-direction: column;
-  margin-top: 10px;
+  margin-top: 10rem;
+}
 
-
-  @media (min-width: 768px) {
-    align-items: center;
-    flex-direction: row;
-  }
+.partners {
+  margin-top: 5rem;
 }
 
 .logos {
-  display: flex;
-  margin-left: -10px;
-
-  @media (min-width: 768px) {
-    margin-left: 10px;
-  }
 }
 
 .logo {
-  width: 120px;
-  height: 120px;
+  display: inline-block;
+  width: 25rem;
+  height: 25rem;
   fill: $white;
-
-  @media (min-width: 768px) {
-    width: 150px;
-    height: 150px;
-  }
 
   &:not(:last-child) {
     margin-right: 10px;
-  }
-}
-
-#ball {
-  position: absolute;
-  top: 80px;
-  left: $page-margin;
-
-  width: 40px;
-  height: 40px;
-  border-radius: 100%;
-  background: white;
-
-  @media (min-width: 768px) {
-    top: 0;
-    right: $page-margin-lg;
-    left: auto;
-    bottom: 0;
-    margin: auto;
-    width: 120px;
-    height: 120px;
   }
 }

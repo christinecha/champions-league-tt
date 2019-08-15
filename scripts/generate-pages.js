@@ -14,6 +14,7 @@ const generatePages = () => {
       }
       
       const filename = path.resolve(PUBLIC_DIR, page.filename)
+      console.log('Generated page:', filename)
       fs.writeFileSync(filename, str)
     })
   })
