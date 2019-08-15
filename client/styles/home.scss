@@ -1,6 +1,10 @@
 @import '_variables.scss';
 
 .intro {
+  h1 {
+    margin-bottom: 10rem;
+  }
+
   .ball {
     background: white;
     width: $col-width * 2;
