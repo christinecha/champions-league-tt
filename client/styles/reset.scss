@@ -1,5 +1,13 @@
 @import '_variables.scss';
 
+@font-face {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-style: italic;
+  src: url("/assets/fonts/Roboto-BlackItalic.ttf") format("ttf");
+  font-display: swap;
+}
+
 html {
   font-size: $unit-portrait;
 
