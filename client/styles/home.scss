@@ -3,19 +3,16 @@
 .intro {
   padding-top: 6rem;
 
-  h1 {
-    margin-bottom: 10rem;
-  }
-
   .ball {
     background: white;
     width: $col-width * 2;
     height: $col-width * 2;
     border-radius: 100%;
+    margin-top: 5rem;
   }
 
   .when-and-where {
-    margin-bottom: 5rem;
+    margin: 5rem 0;
   }
 }
 
@@ -30,6 +27,10 @@
 }
 
 .partners {
+  margin-top: 5rem;
+}
+
+.info-section {
   margin-top: 5rem;
 }
 

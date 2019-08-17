@@ -1,6 +1,6 @@
 @import '_variables.scss';
 
-#overlay {
+.overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -13,10 +13,6 @@
 
   visibility: hidden;
 
-  @media (min-width: 768px) {
-    padding: $page-margin-lg;
-  }
-
   &.active {
     visibility: visible;
   }
@@ -26,7 +22,11 @@
   }
 
   .content {
-    margin-top: 10rem;
+    margin-top: 30rem;
+
+    p {
+      margin: 5rem 0;
+    }
   }
 
   .close {
@@ -36,9 +36,14 @@
     margin: -10px;
     cursor: pointer;
   }
+
+  input, button {
+    width: 100%;
+    height: 9rem;
+  }
 }
 
-#email-signup {
+.email-signup {
   display: flex;
 
   input {

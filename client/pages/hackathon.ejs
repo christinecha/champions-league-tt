@@ -1,6 +1,6 @@
 <% include ./partials/html-start %>
 
-<main>
+<main class="hackathon">
   <div class="intro">
     <div class="row">
       <h1>
@@ -14,11 +14,11 @@
       <div class="col-1"></div>
       <div class="col-6">
         <h3 class="when-and-where">
-          November 1 - 16<br />
+          November 2 - 16<br />
           Everywhere
         </h3>
         <div class="col-5">
-          <button class="get-tickets">
+          <button class="get-tickets" data-overlay="hackathon">
             <h3>
               Join
             </h3>
@@ -32,37 +32,134 @@
     </div>
   </div>
 
-  <div class="presenters">
+  <div class="info-section">
     <div class="row">
-      <div class="col-1"></div>
-      <h4 data-color="yellow">Presented by</h4>
+      <h4 data-color="yellow">What</h4>
     </div>
     <div class="row">
-      <div class="col-2"></div>
-      <div class="logos">
-        <h3>Champions League TT</h3>
-        <h3>New York Table Tennis Academy</h3>
-      </div>
+      <p>
+        A 2-week remote hackathon for developers and designers, combining table tennis and open&nbsp;source.
+      </p>
     </div>
   </div>
-  
-  <div class="partners">
+
+  <div class="info-section">
     <div class="row">
-      <div class="col-1"></div>
-      <h4 data-color="yellow">In partnership with</h4>
+      <h4 data-color="yellow">Why</h4>
     </div>
     <div class="row">
-      <div class="col-2"></div>
-      <div class="logos">
-        <div class="logo" style="margin-left: -2rem;">
-          <% include ./partials/the-push %>
-        </div>
-        <div class="logo">
-          <% include ./partials/aytto %>
-        </div>
-      </div>
+      <ul>
+        <li>- Build cool stuff</li>
+        <li>- Learn from lead open source contributors</li>
+        <li>- Meet other developers & designers</li>
+        <li>- Improve table tennis with technology</li>
+        <li>- Win prizes and get free perks</li>
+      </ul>
     </div>
   </div>
+
+  <div class="info-section">
+    <div class="row">
+      <h4 data-color="yellow">How</h4>
+    </div>
+    <div class="row">
+      <p>
+        Sign up with your email at any time to get an invite to our exclusive hackathon Slack workspace. There, you'll have direct access to other participants, mentors, company representatives, and ongoing discussions.
+      </p>
+    </div>
+  </div>
+
+  <div class="info-section">
+    <div class="row">
+      <h4 data-color="yellow">Who</h4>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <p>
+          From Nov 2 - 15, participate in ongoing workshops, demos, Q&As, and more, led by peers and leaders in the industry.
+        </p>
+        <br />
+        <ul>
+          <li>- Henry Zhu, Babel.js</li>
+          <li>- ...</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="info-section">
+      <div class="row">
+        <h4 data-color="yellow">When</h4>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <p>
+            Feel free to bring a project you've already begun, or start something completely new. From Nov 2 - 15, you can gather collaborators, discuss ideas, prototype designs; work at your own pace. Here are some key events along the way.
+          </p>
+          <br />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-1"></div>
+        <div class="col-11">
+          <ul>
+            <li>
+              <h4 data-color="yellow">Sat, Nov 2</h4>
+              Kick off! Slack invites sent out.
+            </li>
+            <br />
+            <li>
+              <h4 data-color="yellow">Sat, Nov 9</h4>
+              Halfway there - in-progress demo day.
+            </li>
+            <br />
+            <li>
+              <h4 data-color="yellow">Sat, Nov 16</h4>
+              Winners announced at the Invtational Tournament.
+            </li>
+          </ul>
+        </div>
+        </row>
+      </div>
+
+      <div class="info-section">
+        <div class="row">
+          <h4 data-color="yellow">Project Ideas</h4>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <p>
+              Try tackling one of these difficult problems, or come up with something else! Projects can be useful or useless, serious or funny, and most importantly, don't have to be successful.
+            </p>
+            <br />
+            <ul>
+              <li>- Ball-collecting robot</li>
+              <li>- Statistical analysis of match strategy</li>
+              <li>- Wearable table tennis tech</li>
+              <li>- Automatic score-keeping AI</li>
+              <li>- Online game using realistic physics</li>
+              <li>- ... more ideas to be shared in Slack!</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="partners">
+        <div class="row">
+          <h4 data-color="yellow">In partnership with</h4>
+        </div>
+        <div class="row">
+          <div class="col-1"></div>
+          <div class="logos">
+            <div class="logo" style="margin-left: -2rem;">
+              <% include ./partials/the-push %>
+            </div>
+            <div class="logo">
+              <% include ./partials/aytto %>
+            </div>
+          </div>
+        </div>
+      </div>
 </main>
 
 <% include ./partials/ticket-overlay %>

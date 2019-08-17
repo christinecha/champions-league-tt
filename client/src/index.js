@@ -1,17 +1,30 @@
 class App {
   constructor() {
-    this.$overlay = document.getElementById('overlay')
-    this.$closeOverlay = this.$overlay.getElementsByClassName('close')[0]
-    this.$overlayTriggers = Array.from(document.getElementsByClassName('get-tickets'))
+    this.$ticketsOverlay = document.getElementById('tickets-overlay')
+    this.$hackathonOverlay = document.getElementById('hackathon-overlay')
+    this.$ticketsOverlayClose = this.$ticketsOverlay.getElementsByClassName('close')[0]
+    this.$hackathonOverlayClose = this.$hackathonOverlay.getElementsByClassName('close')[0]
+    this.$ticketsOverlayTriggers = Array.from(document.querySelectorAll('[data-overlay="tickets"]'))
+    this.$hackathonOverlayTriggers = Array.from(document.querySelectorAll('[data-overlay="hackathon"]'))
 
-    this.$overlayTriggers.forEach($trigger => {
+    this.$ticketsOverlayTriggers.forEach($trigger => {
       $trigger.addEventListener('click', () => {
-        this.$overlay.classList.add('active')
+        this.$ticketsOverlay.classList.add('active')
       })
     })
 
-    this.$closeOverlay.addEventListener('click', () => {
-      this.$overlay.classList.remove('active')
+    this.$hackathonOverlayTriggers.forEach($trigger => {
+      $trigger.addEventListener('click', () => {
+        this.$hackathonOverlay.classList.add('active')
+      })
+    })
+
+    this.$ticketsOverlayClose.addEventListener('click', () => {
+      this.$ticketsOverlay.classList.remove('active')
+    })
+
+    this.$hackathonOverlayClose.addEventListener('click', () => {
+      this.$hackathonOverlay.classList.remove('active')
     })
   }
 }
