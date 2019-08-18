@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf ./public",
-    "copy:assets": "mkdir ./public/assets && cp ./assets/* public/assets",
+    "copy:assets": "mkdir -p ./public/assets && cp ./assets/* public/assets",
     "generate:sitemap": "node ./scripts/generate-sitemap.js",
     "generate:pages": "node -e 'require(\"./scripts/generate-pages.js\")()'",
     "watch:pages": "npm run generate:pages && node ./scripts/watch-pages.js",
