@@ -30,8 +30,29 @@
 
       <form class="email-signup" id="hackathon-signup" netlify>
         <div class="row">
+          <div class="col-12">
+            <input name="first-name" type="text" placeholder="FIRST NAME" required />
+            <br />
+            <input name="last-name" type="text" placeholder="LAST NAME" required />
+            <br />
+            <div class="field">
+              <input name="is-programmer" type="checkbox"/>
+              <label for="is-programmer">I'm a Programmer</label>
+            </div>
+            <div class="field">
+              <input name="is-designer" type="checkbox"/>
+              <label for="is-designer">I'm a Designer</label>
+            </div>
+            <br />
+            <input name="website" type="text" placeholder="YOUR WEBSITE" />
+          </div>
+        </div>
+
+        <br />
+
+        <div class="row">
           <div class="col-9">
-            <input name="email" type="email" placeholder="EMAIL" />
+            <input name="email" type="email" placeholder="EMAIL" required />
           </div>
           <div class="col-3">
             <button>Okay&nbsp;</button>

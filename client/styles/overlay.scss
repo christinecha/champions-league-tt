@@ -44,10 +44,12 @@
 }
 
 .email-signup {
-  display: flex;
-
   input {
     flex: 1;
+  }
+
+  .field input {
+    flex: 0;
   }
 
   button {

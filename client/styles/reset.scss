@@ -92,10 +92,12 @@ li {
 
 label {
   display: block;
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  margin-bottom: 15px;
+  @include h3();
+}
+
+.field {
+  display: flex;
+  align-items: center;
 }
 
 input,
@@ -115,6 +117,13 @@ textarea {
   &::placeholder {
     color: rgba(255,255,255,0.5);
   }
+}
+
+input[type="checkbox"] {
+  width: 9rem;
+  height: 9rem;
+  border-radius: 9rem;
+  margin-right: 2rem;
 }
 
 input:focus {
