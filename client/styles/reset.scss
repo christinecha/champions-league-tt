@@ -38,6 +38,7 @@ main {
   position: relative;
   width: $content-width;
   margin: auto;
+  min-height: 150rem;
 }
 
 h1 {
@@ -47,6 +48,10 @@ h1 {
   line-height: 0.8em;
   font-style: italic;
   text-transform: uppercase;
+  margin: 0;
+}
+
+h2 {
   margin: 0;
 }
 
@@ -156,4 +161,8 @@ button {
   .col-#{$n} {
     @include col($n);
   }
+}
+
+footer {
+  padding: 5rem 0;
 }

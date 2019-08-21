@@ -1,8 +1,15 @@
 @import '_variables.scss';
 
 .player {
-  padding-top: 6rem;
+  position: relative;
+  margin-top: 6rem;
   margin-bottom: 10rem;
+
+  .flags {
+    position: absolute;
+    top: -1.6rem;
+    right: 0;
+  }
 
   .highlights {
     display: flex;
