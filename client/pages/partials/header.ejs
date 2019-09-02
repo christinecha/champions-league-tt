@@ -1,9 +1,11 @@
 <header>
   <div class="row">
-    <ul>
+    <ul class="col-9">
       <a href="/">
         <li>
-          <div class="logo"></div>
+          <div class="logo">
+            <% include ./cltt %>
+          </div>        
         </li>
       </a>
       <a href="/players">
@@ -22,18 +24,13 @@
         </li>
       </a> -->
     </ul>
-  </div>
-</header>
 
-<div class="fixed-footer">
-  <div class="row">
-    <div class="col-7"></div>
-    <div class="col-5">
-      <button class="get-tickets" data-overlay="tickets">
+    <div class="col-3" style="display: flex; align-items: center;">
+      <button class="get-tickets" id="eventbrite-widget-modal-trigger-71307353213" type="button">
         <h3>
-          Get Tickets
+          Tickets
         </h3>
       </button>
     </div>
   </div>
-</div>
+</header>

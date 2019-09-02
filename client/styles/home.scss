@@ -1,7 +1,9 @@
 @import '_variables.scss';
 
 .intro {
-  padding-top: 6rem;
+  position: relative;
+  margin-top: 6rem;
+  margin-bottom: 5rem;
 
   .ball {
     background: white;
@@ -16,6 +18,15 @@
   }
 }
 
+.presenting-logo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 17rem;
+  height: 17rem;
+  fill: $white;
+}
+
 .presenters,
 .partners {
   display: flex;
@@ -27,7 +38,7 @@
 }
 
 .partners {
-  margin-top: 5rem;
+  margin-top: 10rem;
 }
 
 .info-section {
@@ -45,5 +56,10 @@
 
   &:not(:last-child) {
     margin-right: 10px;
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
   }
 }
