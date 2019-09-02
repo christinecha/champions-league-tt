@@ -22,9 +22,11 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 17rem;
-  height: 17rem;
   fill: $white;
+
+  svg {
+    width: 100%;
+  }
 }
 
 .presenters,

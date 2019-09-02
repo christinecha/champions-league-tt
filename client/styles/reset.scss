@@ -36,7 +36,6 @@ body {
 
 main {
   position: relative;
-  width: $content-width;
   margin: auto;
   min-height: 150rem;
 }
@@ -151,6 +150,7 @@ button {
   border: none;
   outline: none;
   cursor: pointer;
+  max-width: 40rem;
 }
 
 .row {
