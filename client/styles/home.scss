@@ -19,13 +19,11 @@
 }
 
 .presenting-logo {
-  position: absolute;
-  top: 0;
-  right: 0;
   fill: $white;
 
   svg {
     width: 100%;
+    max-height: 30rem;
   }
 }
 

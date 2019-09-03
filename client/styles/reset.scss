@@ -27,7 +27,6 @@ body {
   padding: 0;
   margin: 0;
   font-size: 3rem;
-  padding-bottom: 20rem;
 }
 
 * {
@@ -52,6 +51,12 @@ h1 {
 
 h2 {
   margin: 0;
+  font-size: 6rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  line-height: 0.8em;
+  font-style: italic;
+  text-transform: uppercase;
 }
 
 h3 {
@@ -59,7 +64,7 @@ h3 {
 }
 
 h4 {
-  font-size: 2.5rem;
+  font-size: 2.7rem;
   text-transform: uppercase;
   font-family: 'Roboto', sans-serif;
   font-style: italic;
@@ -74,7 +79,7 @@ p, li {
   font-style: italic;
   font-weight: 700;
   line-height: 1.1em;
-  font-size: 3rem;
+  font-size: 3.2rem;
   margin: 0;
 }
 
@@ -151,6 +156,7 @@ button {
   outline: none;
   cursor: pointer;
   max-width: 40rem;
+  z-index: 1;
 }
 
 .row {
@@ -160,9 +166,17 @@ button {
 @for $n from 1 through 12 {
   .col-#{$n} {
     @include col($n);
+    @include col-l($n);
+  }
+}
+
+@for $n from 1 through 12 {
+  .col-#{$n}-l {
+    @include col-l($n);
   }
 }
 
 footer {
-  padding: 5rem 0;
+  margin-top: 20rem;
+  padding: 10rem 0;
 }
