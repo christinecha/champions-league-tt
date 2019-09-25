@@ -4,6 +4,12 @@
   position: relative;
   margin-top: 6rem;
   margin-bottom: 10rem;
+  width: 100%;
+
+  .info {
+    position: relative;
+    z-index: 1;
+  }
 
   .flags {
     position: absolute;
@@ -21,5 +27,36 @@
     margin-left: auto;
     background: $blue;
     margin-bottom: 0.5rem;
+  }
+
+  .gallery {
+    position: relative;
+    margin-top: -2rem;
+    width: 100%;
+    overflow: hidden;
+
+    .images {
+      height: 100rem;
+      white-space: nowrap;
+      margin: auto;
+
+      &.is-initialized {
+        img {
+          transition: transform 300ms ease-out;
+        }
+      }
+    }
+
+    img {
+      width: auto;
+      height: 100%;
+      margin-right: 2rem;
+    }
+
+
+    .highlights {
+      position: absolute;
+      bottom: 10rem;
+    }
   }
 }

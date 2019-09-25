@@ -10,6 +10,7 @@
 
 html {
   font-size: $unit-portrait;
+  width: 100vw;
 
   @media (min-width: 600px) {
     font-size: $unit-portrait-lg;
@@ -27,6 +28,7 @@ body {
   padding: 0;
   margin: 0;
   font-size: 3rem;
+  width: 100%;
 }
 
 * {

@@ -5,14 +5,14 @@
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf ./public",
-    "copy:assets": "mkdir -p ./public/assets && cp ./assets/* public/assets",
+    "copy:assets": "node ./scripts/copy-assets.js",
     "generate:sitemap": "node ./scripts/generate-sitemap.js",
     "generate:pages": "node -e 'require(\"./scripts/generate-pages.js\")()'",
     "watch:pages": "npm run generate:pages && node ./scripts/watch-pages.js",
     "build:styles": "sass ./client/styles/index.scss ./public/styles/index.css",
     "watch:styles": "sass --watch ./client/styles/index.scss ./public/styles/index.css",
     "build": "NODE_ENV=production webpack && npm run generate:pages && npm run build:styles && npm run copy:assets && npm run generate:sitemap",
-    "dev": "NODE_ENV=development webpack --watch & npm run watch:pages & npm run watch:styles & http-server -p 8000"
+    "dev": "NODE_ENV=development npm run copy:assets && webpack --watch & npm run watch:pages & npm run watch:styles & http-server -p 8000"
   },
   "author": "",
   "license": "ISC",
@@ -21,7 +21,8 @@
     "cheerio": "^1.0.0-rc.3",
     "core-js": "^2.6.9",
     "fs-extra": "^8.0.1",
-    "jsonfile": "^5.0.0"
+    "jsonfile": "^5.0.0",
+    "universal-gallery": "^1.0.1"
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.4.4",
