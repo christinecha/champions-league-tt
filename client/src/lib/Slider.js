@@ -30,6 +30,10 @@ class Slider {
   next() {
     this.$slides = Array.prototype.slice.call(this.$container.querySelectorAll(this.childSelector))
 
+    if (this.$slides.length < 3) {
+      return
+    }
+    
     // copy first to end.
     const $slide = this.$slides[0]
     const $copy = $slide.cloneNode(true)
