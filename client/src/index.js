@@ -1,4 +1,4 @@
-import UniversalGallery from './lib/UniversalGallery'
+import Slider from './lib/Slider'
 
 class App {
   constructor() {
@@ -29,23 +29,16 @@ class App {
       this.$hackathonOverlay.classList.remove('active')
     })
 
-    // const $galleries = Array.prototype.slice.call(document.getElementsByClassName('images'))
+    const $sliders = Array.prototype.slice.call(document.getElementsByClassName('images'))
 
-    // const handleSlide = (index, indexWithClones) => {
-    //   // Do stuff with this information!
-    //   // Ex. trigger another gallery to change slides
-    // }
-
-    // $galleries.forEach($gallery => {
-    //   const gallery = new UniversalGallery({
-    //     galleryNode: $gallery,    // DOMElement that is the parent container for your slides
-    //     childSelector: 'img',  // A CSS selector to grab your slides
-    //     numOfClones: 1,           // Useful if you only have a few slides (explained further below)
-    //     shouldAutoplay: true,     // Toggle autoplay (obvi)
-    //     slideSpeed: 3000,         // Duration between each slide change (in milliseconds)
-    //     handleChange: handleSlide // Called every time the slide index changes
-    //   })
-    // })
+    $sliders.forEach($slider => {
+      const gallery = new Slider({
+        $container: $slider,    // DOMElement that is the parent container for your slides
+        childSelector: 'img',  // A CSS selector to grab your slides
+        shouldAutoplay: true,     // Toggle autoplay (obvi)
+        slideSpeed: 3000,         // Duration between each slide change (in milliseconds)
+      })
+    })
   }
 }
 
