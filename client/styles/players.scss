@@ -9,6 +9,10 @@
   .info {
     position: relative;
     z-index: 1;
+
+    h1 {
+      text-shadow: 0 0 5px rgba(0,0,0,0.6);
+    }
   }
 
   .flags {
