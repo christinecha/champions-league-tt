@@ -2,8 +2,12 @@
 
 .intro {
   position: relative;
-  margin-top: 6rem;
-  margin-bottom: 5rem;
+  margin-top: 10rem;
+  margin-bottom: 7rem;
+
+  h1 {
+    font-size: 13rem;
+  }
 
   .ball {
     background: white;
@@ -21,8 +25,18 @@
 .presenting-logo {
   fill: $white;
 
+  .pingpod {
+    font-size: 30%;
+    display: flex;
+    align-items: flex-end;
+    line-height: 1.2;
+    padding-left: 0.2rem;
+  }
+
   svg {
     width: 100%;
+    width: 50rem;
+    height: 6rem;
     max-height: 30rem;
   }
 }
@@ -46,16 +60,35 @@
 }
 
 .logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 5rem;
 }
 
 .logo {
   display: inline-block;
-  width: 25rem;
-  height: 25rem;
+  width: 22rem;
+  height: 22rem;
   fill: $white;
 
   &:not(:last-child) {
-    margin-right: 10px;
+    margin-right: 4rem;
+  }
+
+  &.pips {
+    width: 20rem;
+    height: 20rem;
+  }
+
+  &.clubhouse {
+    width: 35rem;
+    height: 10rem;
+  }
+
+  &.dr-de-cong-tran {
+    width: 45rem;
+    height: 6rem;
   }
 
   svg {
