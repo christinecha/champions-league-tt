@@ -70,6 +70,7 @@
   display: inline-block;
   width: 22rem;
   height: 22rem;
+  margin-bottom: 1rem;
   fill: $white;
 
   &:not(:last-child) {
@@ -77,8 +78,8 @@
   }
 
   &.pips {
-    width: 20rem;
-    height: 20rem;
+    width: 16rem;
+    height: 16rem;
   }
 
   &.clubhouse {
@@ -89,6 +90,10 @@
   &.dr-de-cong-tran {
     width: 45rem;
     height: 6rem;
+  }
+
+  &.butterfly {
+    width: 26rem;
   }
 
   svg {
