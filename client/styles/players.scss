@@ -1,5 +1,13 @@
 @import '_variables.scss';
 
+.players {
+  display: none;
+
+  &.is-loaded {
+    display: block;
+  }
+}
+
 .player {
   position: relative;
   margin-top: 6rem;

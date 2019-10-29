@@ -69,36 +69,54 @@
 .logo {
   display: inline-block;
   width: 22rem;
-  height: 22rem;
   margin-bottom: 1rem;
   fill: $white;
 
   &:not(:last-child) {
-    margin-right: 4rem;
+    margin-right: 5rem;
+  }
+
+  &.the-push {
+    width: 23rem;
+    height: 23rem;
   }
 
   &.pips {
-    width: 16rem;
-    height: 16rem;
+    width: 12rem;
+    height: 12rem;
+    box-sizing: content-box;
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  &.nyctta {
+    width: 17rem;
+    margin-left: 1rem;
+  }
+
+  &.wttc {
+    width: 18rem;
   }
 
   &.clubhouse {
-    width: 35rem;
-    height: 10rem;
+    width: 32rem;
   }
 
   &.dr-de-cong-tran {
-    width: 45rem;
-    height: 6rem;
+    width: 40rem;
   }
 
   &.butterfly {
     width: 26rem;
   }
 
+  &.nytto {
+    width: 24rem;
+  }
+
   svg {
     width: 100%;
-    height: 100%;
+    height: auto;
   }
 
   path,
