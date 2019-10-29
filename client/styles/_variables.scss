@@ -37,6 +37,7 @@ $content-width-landscape: $col-width-landscape * 12;
   display: flex;
   width: $content-width;
   margin: auto;
+  flex-wrap: wrap;
 
   &.justify-end {
     justify-content: flex-end;
@@ -57,7 +58,7 @@ $content-width-landscape: $col-width-landscape * 12;
   }
 }
 
-@mixin col-l($n) {
+@mixin col-l($n) {  
   @media (min-width: 1024px) {
     width: $n * $col-width-landscape;
   }
