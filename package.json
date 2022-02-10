@@ -39,7 +39,7 @@
     "html-webpack-plugin": "^3.2.0",
     "http-server": "^0.11.1",
     "netlify-lambda": "^1.4.13",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "node-watch": "^0.6.3",
     "nunjucks": "^3.2.0",
     "sass": "^1.21.0",
